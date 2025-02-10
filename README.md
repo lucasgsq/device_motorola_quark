@@ -1,8 +1,8 @@
 # Device configuration for Moto MAXX (Quark)
 
-Copyright 2015 to Today - Felipe Leon Project :sunglasses:<br/>
 Copyright 2015 to 2016 - The CyanogenMod Project<br/>
-Copyright 2017 to Today - The LineageOS Project
+Copyright 2015 to 2021 - Felipe Leon Project<br/>
+Copyright 2017 to Today - The LineageOS Project<br/>
 
 The Motorola Moto Maxx (codenamed _"quark"_) is a high-end smartphone from Motorola mobility.<br/>
 It was announced on November 2014.
