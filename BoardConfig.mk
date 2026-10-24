@@ -29,7 +29,7 @@ TARGET_FS_CONFIG_GEN += \
 
 # Assert
 # TODO remove device ,,
-TARGET_OTA_ASSERT_DEVICE := quark,quark_lra,quark_umts,quark_verizon,xt1225,xt1250,,xt1254
+TARGET_OTA_ASSERT_DEVICE := quark,quark_lra,quark_umts,quark_verizon,xt1225,xt1250,xt1254
 BOARD_USES_QCOM_HARDWARE := true
 
 # Platform

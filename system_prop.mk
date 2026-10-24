@@ -13,7 +13,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio
 ##fluencetype can be "fluence" or "fluencepro" or "none"
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.audio.flinger_standbytime_ms=300
+    ro.audio.flinger_standbytime_ms=300 \
     ro.vendor.audio.sdk.fluencetype=none \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
