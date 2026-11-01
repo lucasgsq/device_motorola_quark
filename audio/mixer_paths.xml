@@ -667,6 +667,8 @@
 
 	<path name="handset-mic">
 		<path name="adc3" />
+		<!-- Modest capture boost over the pre-stock baseline. -->
+		<ctl name="DEC4 Volume" value="93" />
 		<ctl name="ADC1 Volume" value="0" />
 		<ctl name="ADC2 Volume" value="0" />
 		<ctl name="ADC3 Volume" value="16" />
