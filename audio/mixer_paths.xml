@@ -39,16 +39,16 @@
 	<ctl name="ADC4 Volume" value="0" />
 	<ctl name="ADC5 Volume" value="0" />
 	<ctl name="ADC6 Volume" value="0" />
-	<ctl name="DEC1 Volume" value="90" />
-	<ctl name="DEC2 Volume" value="90" />
-	<ctl name="DEC3 Volume" value="90" />
-	<ctl name="DEC4 Volume" value="90" />
-	<ctl name="DEC5 Volume" value="90" />
-	<ctl name="DEC6 Volume" value="90" />
-	<ctl name="DEC7 Volume" value="90" />
-	<ctl name="DEC8 Volume" value="90" />
-	<ctl name="DEC9 Volume" value="90" />
-	<ctl name="DEC10 Volume" value="90" />
+	<ctl name="DEC1 Volume" value="84" />
+	<ctl name="DEC2 Volume" value="84" />
+	<ctl name="DEC3 Volume" value="84" />
+	<ctl name="DEC4 Volume" value="84" />
+	<ctl name="DEC5 Volume" value="84" />
+	<ctl name="DEC6 Volume" value="84" />
+	<ctl name="DEC7 Volume" value="84" />
+	<ctl name="DEC8 Volume" value="84" />
+	<ctl name="DEC9 Volume" value="84" />
+	<ctl name="DEC10 Volume" value="84" />
 	<ctl name="TX1 HPF cut off" value="MIN_3DB_4Hz" />
 	<ctl name="TX2 HPF cut off" value="MIN_3DB_4Hz" />
 	<ctl name="TX3 HPF cut off" value="MIN_3DB_4Hz" />
@@ -584,7 +584,7 @@
 		<path name="adc3" />
 		<ctl name="ADC1 Volume" value="0" />
 		<ctl name="ADC2 Volume" value="0" />
-		<ctl name="ADC3 Volume" value="13" />
+		<ctl name="ADC3 Volume" value="10" />
 		<ctl name="ADC4 Volume" value="0" />
 		<ctl name="ADC5 Volume" value="0" />
 		<ctl name="ADC6 Volume" value="0" />
@@ -595,14 +595,14 @@
 		<ctl name="ADC1 Volume" value="0" />
 		<ctl name="ADC2 Volume" value="0" />
 		<ctl name="ADC3 Volume" value="0" />
-		<ctl name="ADC4 Volume" value="13" />
+		<ctl name="ADC4 Volume" value="10" />
 		<ctl name="ADC5 Volume" value="0" />
 		<ctl name="ADC6 Volume" value="0" />
 	</path>
 
 	<path name="tertiary-mic">
 		<path name="adc1" />
-		<ctl name="ADC1 Volume" value="13" />
+		<ctl name="ADC1 Volume" value="10" />
 		<ctl name="ADC2 Volume" value="0" />
 		<ctl name="ADC3 Volume" value="0" />
 		<ctl name="ADC4 Volume" value="0" />
@@ -621,7 +621,7 @@
 		<ctl name="ADC2 Volume" value="0" />
 		<ctl name="ADC3 Volume" value="0" />
 		<ctl name="ADC4 Volume" value="0" />
-		<ctl name="ADC5 Volume" value="13" />
+		<ctl name="ADC5 Volume" value="10" />
 		<ctl name="ADC6 Volume" value="0" />
 	</path>
 
@@ -637,7 +637,7 @@
 		<ctl name="ADC3 Volume" value="0" />
 		<ctl name="ADC4 Volume" value="0" />
 		<ctl name="ADC5 Volume" value="0" />
-		<ctl name="ADC6 Volume" value="13" />
+		<ctl name="ADC6 Volume" value="10" />
 	</path>
 
 	<path name="speaker">
@@ -647,7 +647,7 @@
 		<path name="adc3" />
 		<ctl name="ADC1 Volume" value="0" />
 		<ctl name="ADC2 Volume" value="0" />
-		<ctl name="ADC3 Volume" value="16" />
+		<ctl name="ADC3 Volume" value="13" />
 		<ctl name="ADC4 Volume" value="0" />
 		<ctl name="ADC5 Volume" value="0" />
 		<ctl name="ADC6 Volume" value="0" />
@@ -669,7 +669,7 @@
 		<path name="adc3" />
 		<ctl name="ADC1 Volume" value="0" />
 		<ctl name="ADC2 Volume" value="0" />
-		<ctl name="ADC3 Volume" value="16" />
+		<ctl name="ADC3 Volume" value="13" />
 		<ctl name="ADC4 Volume" value="0" />
 		<ctl name="ADC5 Volume" value="0" />
 		<ctl name="ADC6 Volume" value="0" />
@@ -702,7 +702,7 @@
 	<path name="headset-mic">
 		<path name="adc2" />
 		<ctl name="ADC1 Volume" value="0" />
-		<ctl name="ADC2 Volume" value="13" />
+		<ctl name="ADC2 Volume" value="10" />
 		<ctl name="ADC3 Volume" value="0" />
 		<ctl name="ADC4 Volume" value="0" />
 		<ctl name="ADC5 Volume" value="0" />
@@ -748,6 +748,9 @@
 	</path>
 
 	<path name="camcorder-mic">
+		<!-- Preserve A11+ stereo camera capture gains. -->
+		<ctl name="DEC3 Volume" value="90" />
+		<ctl name="DEC4 Volume" value="90" />
 		<ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
 		<ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
 		<ctl name="AIF2_CAP Mixer SLIM TX9" value="1" />
@@ -781,12 +784,12 @@
 		<ctl name="DEC3 MUX" value="ADC4" />
 		<ctl name="TX4 HPF cut off" value="MIN_3DB_75Hz" />
 		<ctl name="TX3 HPF cut off" value="MIN_3DB_75Hz" />
-		<ctl name="DEC4 Volume" value="90" />
-		<ctl name="DEC3 Volume" value="90" />
+		<ctl name="DEC4 Volume" value="89" />
+		<ctl name="DEC3 Volume" value="89" />
 		<ctl name="ADC1 Volume" value="0" />
 		<ctl name="ADC2 Volume" value="0" />
-		<ctl name="ADC3 Volume" value="22" />
-		<ctl name="ADC4 Volume" value="22" />
+		<ctl name="ADC3 Volume" value="19" />
+		<ctl name="ADC4 Volume" value="19" />
 		<ctl name="ADC5 Volume" value="0" />
 		<ctl name="ADC6 Volume" value="0" />
 	</path>
@@ -805,11 +808,11 @@
 		<ctl name="DEC4 MUX" value="ADC3" />
 		<ctl name="TX6 HPF cut off" value="MIN_3DB_75Hz" />
 		<ctl name="TX4 HPF cut off" value="MIN_3DB_75Hz" />
-		<ctl name="DEC6 Volume" value="90" />
-		<ctl name="DEC4 Volume" value="90" />
-		<ctl name="ADC1 Volume" value="22" />
+		<ctl name="DEC6 Volume" value="89" />
+		<ctl name="DEC4 Volume" value="89" />
+		<ctl name="ADC1 Volume" value="19" />
 		<ctl name="ADC2 Volume" value="0" />
-		<ctl name="ADC3 Volume" value="22" />
+		<ctl name="ADC3 Volume" value="19" />
 		<ctl name="ADC4 Volume" value="0" />
 		<ctl name="ADC5 Volume" value="0" />
 		<ctl name="ADC6 Volume" value="0" />
@@ -849,8 +852,8 @@
 		<ctl name="DEC3 MUX" value="ADC4" />
 		<ctl name="ADC1 Volume" value="0" />
 		<ctl name="ADC2 Volume" value="0" />
-		<ctl name="ADC3 Volume" value="16" />
-		<ctl name="ADC4 Volume" value="16" />
+		<ctl name="ADC3 Volume" value="13" />
+		<ctl name="ADC4 Volume" value="13" />
 		<ctl name="ADC5 Volume" value="0" />
 		<ctl name="ADC6 Volume" value="0" />
 	</path>
@@ -923,13 +926,13 @@
 	<path name="voice-tty-full-headset-mic">
 		<ctl name="TTY Mode" value="FULL" />
 		<path name="adc2" />
-		<ctl name="DEC5 Volume" value="86" />
+		<ctl name="DEC5 Volume" value="81" />
 	</path>
 
 	<path name="voice-tty-hco-headset-mic">
 		<ctl name="TTY Mode" value="HCO" />
 		<path name="adc2" />
-		<ctl name="DEC5 Volume" value="86" />
+		<ctl name="DEC5 Volume" value="81" />
 	</path>
 
 	<path name="voice-tty-vco-handset-mic">
