@@ -26,9 +26,8 @@ There is no official Shamu lineage-19.1 branch in the queried repository.
   Removing encryptable is not an acceptable generic compatibility fix.
 - Audit kernel networking/BPF requirements. A property claiming BPF support
   does not provide a missing kernel implementation.
-- Audit the existing kernel A12+ branch before use: it was created from an
-  older checkpoint containing the math64 change associated with microphone
-  regressions. Its name does not imply a validated matching kernel.
+- Validate Android 12 requirements against kernel A12+, currently aligned
+  with the A11+ baseline and with the problematic math64 change reverted.
 - IMS/VoLTE depends on matching blobs, services, policy, modem and carrier
   support; do not enable it by copying property overrides alone.
 - The perfd/audio_cutback move requires patched binaries as well as init and
@@ -36,3 +35,21 @@ There is no official Shamu lineage-19.1 branch in the queried repository.
 
 Android 13-specific Bluetooth, rmnet and power-profile changes remain deferred.
 No runtime validation has been performed for this branch.
+
+## A11+ synchronization checkpoint
+
+Kernel A12+ was advanced without rewriting history to f9c074c2cab, matching
+the current A11+ kernel tree. The problematic math64 change is reverted;
+the keys and perf updates are retained. No Android 12-specific kernel
+series has been added yet.
+
+Device A12+ already contains A11+ 06687bfe, including the pending microphone
+gain and headset volume experiments. Its own Android 12 migrations remain.
+The A12+ local_manifests branch targets LineageOS 19.1 and explicitly includes
+legacy APQ8084 sources that are absent from the upstream Android 12 manifest.
+These legacy components still require build/API compatibility validation.
+
+configs/apq8084-Android.mk is linked into hardware/qcom-caf/apq8084/Android.mk
+by the A12+ local manifest. It uses the same namespace guard as the official
+hardware/qcom-caf/common os_pickup.mk, preserving the A11 layout while the
+Android 12 upstream manifest no longer creates that legacy guard.
