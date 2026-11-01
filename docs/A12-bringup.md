@@ -36,6 +36,26 @@ There is no official Shamu lineage-19.1 branch in the queried repository.
 Android 13-specific Bluetooth, rmnet and power-profile changes remain deferred.
 No runtime validation has been performed for this branch.
 
+## Temporary SELinux diagnostics
+
+A12+ userdebug/eng builds temporarily pass both enforcing=0 (kernel) and
+androidboot.selinux=permissive (Android init). User builds remain enforcing.
+SELinux is still enabled and policy is still loaded, so AVC denials can be
+collected. The kernel retains CONFIG_SECURITY_SELINUX_DEVELOP=y.
+
+This does not fix SELinux policy compilation errors or policy-load failures.
+It only prevents enforcement of access denials after policy loads. Do not
+disable SELinux or remove encryption to work around unrelated boot failures.
+
+After boot, check `adb shell getenforce`, `adb shell cat /proc/cmdline` and
+`adb shell getprop ro.boot.selinux`. A debug diagnostic boot should report
+Permissive and the two parameters above. Capture logcat and, with adb root,
+dmesg for AVCs. Do not blindly turn every denial into an allow rule.
+
+For a temporary enforcing test use `adb shell setenforce 1` after `adb root`;
+for the permanent fix restore enforcing=1 androidboot.selinux=enforcing in
+BoardConfig.mk, rebuild boot.img and verify the mode again after reboot.
+
 ## A11+ synchronization checkpoint
 
 Kernel A12+ was advanced without rewriting history to f9c074c2cab, matching
