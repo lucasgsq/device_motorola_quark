@@ -184,6 +184,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ena root by default app only
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.root_access=1
 
-# Set usb to adb and mtp
+# Enable USB debugging by default only on development builds.
+ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp,adb
+else
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
+endif
 
