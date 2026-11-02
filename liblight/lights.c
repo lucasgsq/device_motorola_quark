@@ -39,7 +39,7 @@
 static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 static int g_lcd_brightness = 0;
-static int g_button_on = 0;
+static int g_button_brightness = 0;
 static struct light_state_t g_notification;
 static struct light_state_t g_battery;
 static struct light_state_t g_attention;
@@ -74,7 +74,7 @@ void init_globals(void)
     // init the mutex
     pthread_mutex_init(&g_lock, NULL);
     g_lcd_brightness = -1;
-    g_button_on = -1;
+    g_button_brightness = -1;
     memset(&g_battery, 0, sizeof(g_battery));
     memset(&g_notification, 0, sizeof(g_notification));
     memset(&g_attention, 0, sizeof(g_attention));
@@ -159,8 +159,6 @@ set_light_backlight(struct light_device_t* dev,
         (g_lcd_brightness != brightness))
     {
             err = write_int(LCD_FILE, brightness);
-            if (!err && g_button_on > 0)
-                    err = write_int(BUTTON_FILE, brightness);
     }
 
     g_lcd_brightness = brightness;
@@ -226,18 +224,16 @@ set_light_buttons(struct light_device_t* dev,
         struct light_state_t const* state)
 {
     int err = 0;
-    int on = rgb_to_brightness(state) > 0;
+    int brightness = rgb_to_brightness(state);
 
     pthread_mutex_lock(&g_lock);
 
-    if (g_button_on < 0 ||
-        (!g_button_on && on > 0) ||
-        (g_button_on > 0 && !on))
-    {
-        err = write_int(BUTTON_FILE, on ? g_lcd_brightness : 0);
+    /* Button intensity is independent of the display backlight. */
+    if (g_button_brightness != brightness) {
+        err = write_int(BUTTON_FILE, brightness);
+        if (!err)
+            g_button_brightness = brightness;
     }
-
-    g_button_on = on;
     pthread_mutex_unlock(&g_lock);
     return err;
 }
