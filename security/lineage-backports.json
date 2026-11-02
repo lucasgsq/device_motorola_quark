@@ -1,0 +1,518 @@
+{
+  "branch": "A11+KSU",
+  "verified_month": "2026-10",
+  "meaning": "Reference of verified LineageOS backport batches; not official SPL or full CVE coverage certification",
+  "installed_build_verified": false,
+  "checked_topics": [
+    "R_asb_2026-09",
+    "R_asb_2026-10"
+  ],
+  "changes_present_in_history": 84,
+  "local_audit_sha256": "f4f6d726d5873ca5c3682b9b01bff144f1490ec768904252e8530285772ad980",
+  "verified_changes": [
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_services_Telephony",
+      "commit": "4c675054ae5e03b6e71a0b86e26921e3d2efa700",
+      "head": "4c675054ae5e03b6e71a0b86e26921e3d2efa700"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_TelephonyProvider",
+      "commit": "458b8b5c8c172f3b0508d505d56ccb0ae034bff0",
+      "head": "458b8b5c8c172f3b0508d505d56ccb0ae034bff0"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_ContactsProvider",
+      "commit": "7b1131a18889425ff9ccc516306ed5ced3bf45d8",
+      "head": "7b1131a18889425ff9ccc516306ed5ced3bf45d8"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_ContactsProvider",
+      "commit": "5dbc75c6dfb7566e573222afa6db12afea6cfec3",
+      "head": "7b1131a18889425ff9ccc516306ed5ced3bf45d8"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_apps_Car_Settings",
+      "commit": "8e352834971446c98704a77df12b213307fb1446",
+      "head": "8e352834971446c98704a77df12b213307fb1446"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_ContactsProvider",
+      "commit": "db628352cf930cd8a773332f3bb6966315b9ead2",
+      "head": "7b1131a18889425ff9ccc516306ed5ced3bf45d8"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_apps_Settings",
+      "commit": "31468874b701614b372765ee02d723b507f33004",
+      "head": "31468874b701614b372765ee02d723b507f33004"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_opt_telephony",
+      "commit": "3fe5dcae734dc03d46a0dd23c1941b10ff19009e",
+      "head": "efc958ac5a609659ef4b2fd67352651ed2116a02"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_opt_telephony",
+      "commit": "7eaa87ac44d62396190656dbe3ca33474e15b088",
+      "head": "efc958ac5a609659ef4b2fd67352651ed2116a02"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_libufdt",
+      "commit": "0e5bbf7a5bcb235c300ca214a9375078103a8326",
+      "head": "0e5bbf7a5bcb235c300ca214a9375078103a8326"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_nfc",
+      "commit": "b9e933feac17ec0d573b998909c168331dda9468",
+      "head": "e56578d0fc93b4ca4375c07e7f4bca82b8aa2ceb"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_av",
+      "commit": "7db8eb3de32436269109f8168d24f19d90cb24ce",
+      "head": "7db8eb3de32436269109f8168d24f19d90cb24ce"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_av",
+      "commit": "c58fdc4bcdb3880b636c4401444b0f5247283bd8",
+      "head": "7db8eb3de32436269109f8168d24f19d90cb24ce"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_av",
+      "commit": "ee776d0a5c760e5cfb04fd4a45db4b4f2b14d15b",
+      "head": "7db8eb3de32436269109f8168d24f19d90cb24ce"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_DownloadProvider",
+      "commit": "65e7c53354ec541c16bcadfa8f0b32f22ccdc3a9",
+      "head": "65e7c53354ec541c16bcadfa8f0b32f22ccdc3a9"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_DownloadProvider",
+      "commit": "392f4f0a8ffd125d282826f0ac369cadcc1b1559",
+      "head": "65e7c53354ec541c16bcadfa8f0b32f22ccdc3a9"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_DownloadProvider",
+      "commit": "06df8f94cff1d12deddbae04f3a10646799aadfc",
+      "head": "65e7c53354ec541c16bcadfa8f0b32f22ccdc3a9"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_DownloadProvider",
+      "commit": "4d09c99f659dfaf0d7f4d85b5009220ae8d6478f",
+      "head": "65e7c53354ec541c16bcadfa8f0b32f22ccdc3a9"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_services_Telecomm",
+      "commit": "8381867d864dbe299f91ee040249eb4cd4667b5f",
+      "head": "8381867d864dbe299f91ee040249eb4cd4667b5f"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_services_Telecomm",
+      "commit": "51abdcb4995dba6a15d4a5d2492a44466c111a66",
+      "head": "8381867d864dbe299f91ee040249eb4cd4667b5f"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "8d14a16b5d75cd471925b45b96a05ee417248673",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "81e3ec4fe9da23c2638d6fb2c256f08f9279e506",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "b298f336f66784d9d85f0de81b7605e597dd6920",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "65ff5fc59c72d48cdbcb1bbfda9755272197e37b",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "4995e401e85473ef0355a646a0a5aca6f4d73172",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "f3904f8bd1f1201cfc0d3b9aab09f356d9ad8edf",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "9966d66f55d6e075a7e2fd28c3e3ce4fec4b962f",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "163cb4ef97bd38f7ea7f6541fcb3869f97bf16b4",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "048697f2bd3a780269efcb0d06df2d1d13446f44",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+      "commit": "1caf66342b69f9d819a152dcdb5a5d5408de047b",
+      "head": "1caf66342b69f9d819a152dcdb5a5d5408de047b"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_apps_TV",
+      "commit": "d005cb1820714e4bfb35a5e3128671e019af8b38",
+      "head": "d005cb1820714e4bfb35a5e3128671e019af8b38"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_apps_TV",
+      "commit": "9e96ab0965afcd44fb126635731f8c604140adb5",
+      "head": "d005cb1820714e4bfb35a5e3128671e019af8b38"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_qcom_opensource_system_bt",
+      "commit": "6c64ff7760e082c2af0048d28cef8b533e2bc3ba",
+      "head": "6c64ff7760e082c2af0048d28cef8b533e2bc3ba"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_qcom_opensource_system_bt",
+      "commit": "e650e271f507035d8397ea13f047828705448187",
+      "head": "6c64ff7760e082c2af0048d28cef8b533e2bc3ba"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_qcom_opensource_system_bt",
+      "commit": "355016c6b777d7da7926beeda83ec88a7c38c866",
+      "head": "6c64ff7760e082c2af0048d28cef8b533e2bc3ba"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_qcom_opensource_system_bt",
+      "commit": "4a419f827a9843c599b5857262dfb6d22c25d6f4",
+      "head": "6c64ff7760e082c2af0048d28cef8b533e2bc3ba"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_development",
+      "commit": "94799eda069666937d0fec1b9df973306fc58fe1",
+      "head": "9ecfb8110c04d5da90f8413d8ae396b2c98121f3"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_bionic",
+      "commit": "b67b03356ceb6171bd0cfdb88c3ee9413c476935",
+      "head": "b67b03356ceb6171bd0cfdb88c3ee9413c476935"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_external_dng_sdk",
+      "commit": "fe73a7026ef8b7bb9c06605eb4b5404f518edb07",
+      "head": "fe73a7026ef8b7bb9c06605eb4b5404f518edb07"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_external_freetype",
+      "commit": "802450d1d821d8ceafe27c4eda13daebc938dbf7",
+      "head": "802450d1d821d8ceafe27c4eda13daebc938dbf7"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_external_libhevc",
+      "commit": "6545b8916d5369c5a503525b47115f5f62f2a5a0",
+      "head": "6545b8916d5369c5a503525b47115f5f62f2a5a0"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_external_libpng",
+      "commit": "2df92ca3721c6350e3eeaa059c2197f4f9e6773b",
+      "head": "2df92ca3721c6350e3eeaa059c2197f4f9e6773b"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_av",
+      "commit": "503b9ad86b6f06e2146fc7161cb13345a1dc174a",
+      "head": "7db8eb3de32436269109f8168d24f19d90cb24ce"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_av",
+      "commit": "5e31af2cc6506b204adec846ff565d4c6b786950",
+      "head": "7db8eb3de32436269109f8168d24f19d90cb24ce"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_av",
+      "commit": "48da22cb7b4aec1c1270c327e3f71cacee9d292d",
+      "head": "7db8eb3de32436269109f8168d24f19d90cb24ce"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_apps_Settings",
+      "commit": "73f827d5b2f473c94367978b981e777c9df9011d",
+      "head": "31468874b701614b372765ee02d723b507f33004"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_apps_TV",
+      "commit": "330b6c9c80b2d530dd05484d33b45840bedf8db6",
+      "head": "d005cb1820714e4bfb35a5e3128671e019af8b38"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_ContactsProvider",
+      "commit": "b65cdb8f8c683ad1aa6e33c7e1d79215d59a3b18",
+      "head": "7b1131a18889425ff9ccc516306ed5ced3bf45d8"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_MediaProvider",
+      "commit": "55c343eb1c669e26a385964f9a020554ec6cae65",
+      "head": "55c343eb1c669e26a385964f9a020554ec6cae65"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_MediaProvider",
+      "commit": "b9f03e33b7bff3fb473f67fc35ac4e4dcf186818",
+      "head": "55c343eb1c669e26a385964f9a020554ec6cae65"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_packages_providers_MediaProvider",
+      "commit": "f1362cb0b67451b21b1a94d6889ac7dcfdab7c58",
+      "head": "55c343eb1c669e26a385964f9a020554ec6cae65"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_bt",
+      "commit": "bcca9a572f1cc539ba21ebe940c3642ce8707d1a",
+      "head": "bcca9a572f1cc539ba21ebe940c3642ce8707d1a"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_bt",
+      "commit": "1c523077defe5afeaca87a843d32b213540effd8",
+      "head": "bcca9a572f1cc539ba21ebe940c3642ce8707d1a"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_bt",
+      "commit": "75442eb5ec84f5537b775f98e5cfaa019fe130d5",
+      "head": "bcca9a572f1cc539ba21ebe940c3642ce8707d1a"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_core",
+      "commit": "92420679ffbd50b79d76525085b21278f8497037",
+      "head": "92420679ffbd50b79d76525085b21278f8497037"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_core",
+      "commit": "5a5c212f75f14fa99ae8911255eda579bfd0e892",
+      "head": "92420679ffbd50b79d76525085b21278f8497037"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+      "commit": "68c3c69d5281fc3e64c4f1bcedeb9db71d9368f2",
+      "head": "1caf66342b69f9d819a152dcdb5a5d5408de047b"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+      "commit": "d2cc4bcb2724615ef08750b67145f7fa594d8edf",
+      "head": "1caf66342b69f9d819a152dcdb5a5d5408de047b"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+      "commit": "fa51386d282561d636e2f952330b233cecf6483b",
+      "head": "1caf66342b69f9d819a152dcdb5a5d5408de047b"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+      "commit": "8672ed5476cbce942cc90d981ab7017d31c78916",
+      "head": "1caf66342b69f9d819a152dcdb5a5d5408de047b"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+      "commit": "fe6254f90c72a9a9b073f9d46cb8ac4f923a40b5",
+      "head": "1caf66342b69f9d819a152dcdb5a5d5408de047b"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_external_exfatprogs",
+      "commit": "b9e03cce7274e53bc947e9b3291d2d4b885f442d",
+      "head": "b9e03cce7274e53bc947e9b3291d2d4b885f442d"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_external_exfatprogs",
+      "commit": "dc435e0c2a121d5cb38696a4ec3bf85eed589d5d",
+      "head": "b9e03cce7274e53bc947e9b3291d2d4b885f442d"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "6432e2cf6632de03b8ba48d1d18825f1c9b5350c",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "be29b9d8fd4fab4805fe164eaf0c33685877c538",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "df6216609acdee3dad013f933e4b98570b97ed8a",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "efefdac72742c9902a8ceb0c3272be41351df722",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "4bb4c97dd3a2fca4352823c806409c19268b7af1",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "650fdae837c8a25394cd217c177b7afbeba27c90",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "2e4df0f79d7cb067a8a646bb8fe3e594d2488c24",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "bb674a8b7524ef308f5e52d5e505a5b5d5e5d47f",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "6d02bca250bbcb731e3ec23ada8baba0cb69be6b",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "2be6e27b4f726549874e728b9bfc375fc76cf57c",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "beebd9f8be8e806e739a5832b5e7c352069d82f5",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_nfc",
+      "commit": "7f3db2f513b95f8fb991cd1b75c2e92d4d8e391e",
+      "head": "e56578d0fc93b4ca4375c07e7f4bca82b8aa2ceb"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_nfc",
+      "commit": "40b623e574ae2b834c5d053594130a9b10ffc442",
+      "head": "e56578d0fc93b4ca4375c07e7f4bca82b8aa2ceb"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_nfc",
+      "commit": "6a231e5a03aa93ca31ac4540913757c16d69616d",
+      "head": "e56578d0fc93b4ca4375c07e7f4bca82b8aa2ceb"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android_system_nfc",
+      "commit": "3c609bfbaccf2045cadd070c65bb19e012a5c8c0",
+      "head": "e56578d0fc93b4ca4375c07e7f4bca82b8aa2ceb"
+    },
+    {
+      "topic": "R_asb_2026-09",
+      "project": "LineageOS/android",
+      "commit": "88e370827501474db8f1905128fdea2e8128ead4",
+      "head": "f79a8a06c064e3fd6d3dcad2b348719b277671e6"
+    },
+    {
+      "topic": "R_asb_2026-10",
+      "project": "LineageOS/android_system_nfc",
+      "commit": "e56578d0fc93b4ca4375c07e7f4bca82b8aa2ceb",
+      "head": "e56578d0fc93b4ca4375c07e7f4bca82b8aa2ceb"
+    },
+    {
+      "topic": "R_asb_2026-10",
+      "project": "LineageOS/android_frameworks_opt_telephony",
+      "commit": "efc958ac5a609659ef4b2fd67352651ed2116a02",
+      "head": "efc958ac5a609659ef4b2fd67352651ed2116a02"
+    },
+    {
+      "topic": "R_asb_2026-10",
+      "project": "LineageOS/android_development",
+      "commit": "9ecfb8110c04d5da90f8413d8ae396b2c98121f3",
+      "head": "9ecfb8110c04d5da90f8413d8ae396b2c98121f3"
+    },
+    {
+      "topic": "R_asb_2026-10",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "2f5cf1e4fc1e8b1480d3c27a855f95d6d45429f4",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    },
+    {
+      "topic": "R_asb_2026-10",
+      "project": "LineageOS/android_frameworks_base",
+      "commit": "47dd03cf50409f40b777519af8cc23c1074736c4",
+      "head": "45d791b3a5a21bbe8b4b1ace8c705839bd71cf17"
+    }
+  ]
+}
