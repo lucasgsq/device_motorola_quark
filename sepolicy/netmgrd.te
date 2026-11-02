@@ -1,17 +1,17 @@
-allow netmgrd netmgrd:capability { dac_override };
-allow netmgrd sysfs_esoc:dir rw_dir_perms;
+# File access uses the service UID/groups; no CAP_DAC_OVERRIDE.
+allow netmgrd sysfs_esoc:dir r_dir_perms;
 allow netmgrd sysfs_esoc:file rw_file_perms;
-allow netmgrd sysfs_ssr:dir rw_dir_perms;
+allow netmgrd sysfs_ssr:dir r_dir_perms;
 allow netmgrd sysfs_ssr:file rw_file_perms;
 allow netmgrd sysfs_ssr_toggle:file rw_file_perms;
-allow netmgrd sysfs_ssr_toggle:dir rw_dir_perms;
+allow netmgrd sysfs_ssr_toggle:dir r_dir_perms;
 allow netmgrd sysfs_net:file rw_file_perms;
 
 #Give all untill we fix all the paths
 allow netmgrd sysfs:file rw_file_perms;
-allow netmgrd sysfs:dir rw_dir_perms;
+allow netmgrd sysfs:dir r_dir_perms;
 
-allow netmgrd dnsresolver_service:service_manager find;
-allow netmgrd netd_service:service_manager find;
+# Network service operations use the authorized framework/wrapper path.
+# Network service operations use the authorized framework/wrapper path.
 allow netmgrd servicemanager:binder call;
 

@@ -1,3 +1,5 @@
 # Moto Camera
 get_prop(untrusted_app, opengles_prop)
 get_prop(untrusted_app, exported_camera_prop)
+# Legacy Moto Camera runs in the shared untrusted_app_25 domain.
+get_prop(untrusted_app_25, exported_camera_prop)

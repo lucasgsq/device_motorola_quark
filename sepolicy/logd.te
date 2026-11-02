@@ -1,1 +1,1 @@
-allow logd logd:capability { dac_override dac_read_search };
+# Use the platform logd policy and correctly owned log resources.

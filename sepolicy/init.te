@@ -64,7 +64,7 @@ allow init sensors_device:chr_file { ioctl };
 allow init self:netlink_socket { create bind read write };
 allow init sysfs_block_iosched:dir relabelfrom;
 allow init sysfs_block_iosched:file relabelfrom;
-allow adspd sysfs_c55_ctrl:dir rw_dir_perms;
+allow adspd sysfs_c55_ctrl:dir r_dir_perms;
 allow init sysfs_binder:file write;
 
 #Init.rc chmod
@@ -130,11 +130,10 @@ allow init {
 }:dir mounton;
 
 #Give all untill we add all paths to "genfs_contexts"
-allow init sysfs:file create_file_perms;
-allow init sysfs:dir create_dir_perms;
+# Sysfs control files require their specific genfs_contexts labels.
+allow init sysfs:dir { r_dir_perms setattr };
 
 #MultiROM
-allow init vendor_file:lnk_file create;
 allow init proc_filesystems:file { getattr setattr };
 
 # Allow init to bind mount loader config for media swcodec

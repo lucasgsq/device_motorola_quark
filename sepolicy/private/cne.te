@@ -1,1 +1,1 @@
-allow system_app cne_service:service_manager add;
+# CNE registers through dataservice_app; see Qualcomm seapp_contexts.

@@ -1,4 +1,4 @@
-allow mdm_helper self:capability dac_override;
+# Use resource ownership/groups; generic DAC bypass is not permitted.
 allow mdm_helper persist_file:dir { open read getattr search };
 allow mdm_helper persist_file:file { open read write getattr };
 allow mdm_helper sysfs:dir { open read };

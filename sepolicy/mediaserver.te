@@ -12,17 +12,21 @@ allow mediaserver init:unix_dgram_socket sendto;
 allow mediaserver system_data_root_file:sock_file write;
 allow mediaserver hal_configstore_default:binder call;
 allow mediaserver hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
-allow mediaserver default_android_service:service_manager add;
+add_service(mediaserver, quark_camera_bgproc_service)
 allow mediaserver audio_device:chr_file { open read write ioctl };
 allow mediaserver sensorservice_service:service_manager { find };
 binder_call(mediaserver, sensorservice_service);
 allow mediaserver hal_lineage_camera_motor_hwservice:hwservice_manager find;
-allow mediaserver cameraproxy_service:service_manager {add find};
+allow mediaserver cameraproxy_service:service_manager find;
 allow mediaserver cameraserver_service:service_manager {add find};
 allow mediaserver device:dir { open read };
 allow mediaserver fwk_camera_hwservice:hwservice_manager {add find};
 allow mediaserver hal_camera_hwservice:hwservice_manager {add find};
-allow mediaserver hidl_base_hwservice:hwservice_manager {add find};
-allow mediaserver sensor_privacy_service:service_manager {add find};
+allow mediaserver hidl_base_hwservice:hwservice_manager add;
+allow mediaserver sensor_privacy_service:service_manager find;
 get_prop(mediaserver, exported_camera_prop)
 
+
+# Client side of the private mm-qcamera-daemon socket directory.
+allow mediaserver camera_socket:dir search;
+unix_socket_connect(mediaserver, camera, mm-qcamerad)
