@@ -45,6 +45,10 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    # Private camera IPC directory.
+    mkdir /dev/camera 0770 camera camera
+    restorecon_recursive /dev/camera
+
     # pstore
     chown system log /sys/fs/pstore/annotate-ramoops
     chmod 0440 /sys/fs/pstore/annotate-ramoops
@@ -79,7 +83,6 @@ on fs
 on post-fs-data
 
     # Remove old mpdecision data
-    rm /data/system/perfd/default_values
 
     # msm specific files that need to be created on /data
     mkdir /data/tombstones 0771 system system
@@ -125,11 +128,7 @@ on post-fs-data
     chown dhcp system /data/misc/dhcp
 
     # Create the directories used by CnE subsystem
-    mkdir /data/connectivity 0771 system system
-    chown system system /data/connectivity
 
-    mkdir /data/connectivity/nsrm 0771 system system
-    chown system system /data/connectivity/nsrm
 
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
@@ -163,9 +162,6 @@ on post-fs-data
     mkdir /data/misc/quipc 0770 gps system
 
     # Create directories for Location services
-    mkdir /data/misc/location 0770 gps gps
-    mkdir /data/misc/location/mq 0770 gps gps
-    mkdir /data/misc/location/xtwifi 0770 gps gps
 
     # Create directory for IMS services
     mkdir /data/shared 0755
@@ -228,8 +224,7 @@ on post-fs-data
     mkdir /data/ss-ram-dumps 0750 radio log
     mkdir /data/ss-ram-dumps/bp-dumps 0750 radio log
 
-    # Create directory used by power_supply_logger
-    mkdir /data/power_supply_logger 0750 oem_5001 log
+    # Core init prepares power_supply_logger in quark-camera-data.rc.
 
     # Permissions for Factory Test of Charging Paths
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_auto_enable
@@ -248,9 +243,7 @@ on post-fs-data
     mkdir /data/diag_mdlog 0750 system log
     mkdir /data/diag_mdlog/logs 0750 log log
 
-    # Create directory for cutback
-    mkdir /data/misc/cutback 0770 radio wifi
-    mkdir /data/misc/audio_cutback 0770 radio audio
+    # Core init prepares cutback directories in quark-camera-data.rc.
 
     # for signed data block installation
     mkdir /data/local/dbvc 0750 system shell
@@ -349,10 +342,6 @@ on boot
     chmod 2770 /dev/socket/netmgr
 
     #Create PERFD deamon related dirs
-    mkdir /data/misc/perfd 0755 root system
-    chmod 2755 /data/misc/perfd
-    mkdir /data/system/perfd 0770 root system
-    chmod 2770 /data/system/perfd
 
     # Low Brightness at boot
     write /sys/class/leds/lcd-backlight/brightness 63
@@ -519,11 +508,12 @@ service atvc /vendor/bin/dbvc_atvc_property_set
 service thermal-engine /vendor/bin/thermal-engine
     class hal
     user root
-    group root
+    group root system
 
 service thermal-com /vendor/bin/thermal-engine --minimode
     class hal
     user root
+    group root system
     disabled
     writepid /dev/cpuset/system-background/tasks
 
@@ -565,7 +555,7 @@ on property:ro.mdm_helper_proxy_req=true
 on property:init.svc.ril-daemon=running
     setprop ro.mdm_helper_proxy_req true
 
-service qcamerasvr /vendor/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/quark-camera-start
     class late_start
     user camera
     group camera system inet input graphics gps

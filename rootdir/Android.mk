@@ -112,3 +112,22 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 BOARD_ROOT_EXTRA_SYMLINKS := /data/ssh:var/run/ssh
+
+# Native camera album migration and daemon entrypoint.
+include $(CLEAR_VARS)
+LOCAL_MODULE := quark-camera-start
+LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
+LOCAL_SRC_FILES := camera_start.c
+LOCAL_CFLAGS := -std=c11 -Wall -Wextra -Werror
+LOCAL_SHARED_LIBRARIES := liblog
+include $(BUILD_EXECUTABLE)
+
+# Core init prepares the core-data directory; vendor_init must not gain access.
+include $(CLEAR_VARS)
+LOCAL_MODULE := quark-camera-data.rc
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES := etc/quark-camera-data.rc
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/init
+include $(BUILD_PREBUILT)

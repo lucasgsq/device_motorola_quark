@@ -1,0 +1,32 @@
+# Four read-only diagnostic endpoints, distinct from GPU/devfreq controls.
+type quark_overlay_gpu_metric, fs_type, sysfs_type;
+type quark_overlay_bus_metric, fs_type, sysfs_type;
+
+# Preserve existing explicit accesses for the daemons controlling these nodes.
+allow cdsprpcd quark_overlay_bus_metric:file { getattr open read ioctl lock map watch watch_reads };
+allow hal_perf_server quark_overlay_bus_metric:file { { getattr open read ioctl lock map watch watch_reads } { open append write lock map } };
+allow hal_perf_server quark_overlay_gpu_metric:file { { getattr open read ioctl lock map watch watch_reads } { open append write lock map } };
+allow init quark_overlay_gpu_metric:file setattr;
+allow init quark_overlay_gpu_metric:file { { getattr open read ioctl lock map watch watch_reads } { open append write lock map } };
+allow mpdecision quark_overlay_gpu_metric:file { { getattr open read ioctl lock map watch watch_reads } { open append write lock map } };
+allow perfd quark_overlay_bus_metric:file write;
+allow perfd quark_overlay_bus_metric:file { getattr open read ioctl lock map watch watch_reads };
+allow perfd quark_overlay_gpu_metric:file write;
+allow perfd quark_overlay_gpu_metric:file { getattr open read ioctl lock map watch watch_reads };
+allow platform_app quark_overlay_bus_metric:file { getattr open read ioctl lock map watch watch_reads };
+allow qdmastatsd quark_overlay_gpu_metric:file { getattr open read ioctl lock map watch watch_reads };
+allow qti_init_shell quark_overlay_bus_metric:file { getattr open read ioctl lock map watch watch_reads };
+allow qti_init_shell quark_overlay_bus_metric:file { open append write lock map };
+allow qti_init_shell quark_overlay_gpu_metric:file { getattr open read ioctl lock map watch watch_reads };
+allow qvrd quark_overlay_gpu_metric:file { getattr open read ioctl lock map watch watch_reads };
+allow thermal-engine quark_overlay_gpu_metric:file { { getattr open read ioctl lock map watch watch_reads } { open append write lock map } };
+
+# The integrated overlay shares system_app; grant reads only on these metrics.
+allow system_app sysfs_kgsl:dir search;
+allow system_app quark_overlay_gpu_metric:file { getattr open read };
+neverallow system_app quark_overlay_gpu_metric:file { write append create setattr relabelfrom relabelto unlink rename link };
+allow system_app quark_overlay_bus_metric:file { getattr open read };
+neverallow system_app quark_overlay_bus_metric:file { write append create setattr relabelfrom relabelto unlink rename link };
+
+# Follow the KGSL devfreq link without granting access to other control files.
+allow system_app sysfs_kgsl:lnk_file { getattr read };

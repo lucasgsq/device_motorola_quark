@@ -43,3 +43,9 @@ genfscon proc /bootinfo                                                         
 genfscon proc /sys/kernel/boot_reason                                                             u:object_r:proc_bootinfo:s0
 genfscon proc /bus/pci/devices                                                                    u:object_r:proc_bus_pci:s0
 genfscon proc /sys/vm/swappiness                      u:object_r:proc_swap:s0
+
+# Exact metric endpoints read by the integrated SysInfo overlay.
+genfscon sysfs /devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpubusy u:object_r:quark_overlay_gpu_metric:s0
+genfscon sysfs /devices/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/governor u:object_r:quark_overlay_gpu_metric:s0
+genfscon sysfs /devices/qcom,cpubw.35/devfreq/qcom,cpubw.35/cur_freq u:object_r:quark_overlay_bus_metric:s0
+genfscon sysfs /devices/qcom,cpubw.35/devfreq/qcom,cpubw.35/governor u:object_r:quark_overlay_bus_metric:s0

@@ -1,0 +1,2 @@
+# Motorola background camera service hosted by mediaserver.
+type quark_camera_bgproc_service, service_manager_type;

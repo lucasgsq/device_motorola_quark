@@ -4,7 +4,7 @@
 /data/chargeonlymode(/.*)?              u:object_r:chargeonly_data_file:s0
 /data/misc/cutback(/.*)?                u:object_r:cutback_data_file:s0
 /data/misc/audio_cutback(/.*)?          u:object_r:audio_cutback_data_file:s0
-/data/cam_socket([0-9])*                u:object_r:camera_socket:s0
+/data/cam_socket([0-9])*                u:object_r:quark_core_camera_socket:s0
 /data/power_supply_logger(/.*)?         u:object_r:battery_data_file:s0
 /data/system/dropbox-add(/.*)?          u:object_r:adspd_data_file:s0
 /data/vendor/mediadrm(/.*)?             u:object_r:mediadrm_vendor_data_file:s0
@@ -70,7 +70,7 @@
 ###################################
 # System files
 #
-/system/etc/motorola/qcril.db                              u:object_r:radio_data_file:s0
+/system/etc/motorola/qcril.db                              u:object_r:quark_radio_seed_file:s0
 
 ###################################
 # vendor files
@@ -101,3 +101,16 @@
 ###################################
 # executeables
 /system/bin/clean_scratch_files                         u:object_r:clean_scratch_files_exec:s0
+
+# Private camera IPC sockets on tmpfs.
+/dev/camera(/.*)?                       u:object_r:camera_socket:s0
+
+# Persistent private album and its native migration entrypoint.
+/data/cam(/.*)?                         u:object_r:camera_data_file:s0
+/(vendor|system/vendor)/bin/quark-camera-start u:object_r:mm-qcamerad_exec:s0
+
+# Exact metric endpoints read by the integrated SysInfo overlay.
+/sys/devices/fdb00000\.qcom,kgsl\-3d0/kgsl/kgsl\-3d0/gpubusy u:object_r:quark_overlay_gpu_metric:s0
+/sys/devices/fdb00000\.qcom,kgsl\-3d0/devfreq/fdb00000\.qcom,kgsl\-3d0/governor u:object_r:quark_overlay_gpu_metric:s0
+/sys/devices/qcom,cpubw\.35/devfreq/qcom,cpubw\.35/cur_freq u:object_r:quark_overlay_bus_metric:s0
+/sys/devices/qcom,cpubw\.35/devfreq/qcom,cpubw\.35/governor u:object_r:quark_overlay_bus_metric:s0

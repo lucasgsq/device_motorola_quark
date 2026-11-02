@@ -11,13 +11,13 @@ allow vendor_init {
 }:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
 
 allow vendor_init radio_data_file:file create_file_perms;
-allow vendor_init rootfs:file create_file_perms;
+# No generic rootfs file creation/writing from vendor init.
 allow vendor_init rootfs:dir  create_dir_perms;
 allow vendor_init ipa_dev:chr_file w_file_perms;
 allow vendor_init proc:file w_file_perms;
 allow vendor_init debugfs:file create_file_perms;
 allow vendor_init media_data_file:dir create_file_perms;
-allow vendor_init usermodehelper:file create_file_perms;
+# No generic usermodehelper file creation/writing from vendor init.
 allow vendor_init dalvikcache_data_file:dir search;
 allow vendor_init proc_swap:file write;
 allow vendor_init cache_file:dir r_dir_perms;

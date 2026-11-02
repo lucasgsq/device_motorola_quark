@@ -416,3 +416,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v29.so
 
+
+# Preserve the legacy face album before starting the camera daemon.
+PRODUCT_PACKAGES += quark-camera-start quark-camera-data.rc

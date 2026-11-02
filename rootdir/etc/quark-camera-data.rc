@@ -1,0 +1,55 @@
+# Installed under /system/etc/init: these actions run in core init.
+# camera_data_file is core data; do not create it from a vendor_init action.
+on post-fs-data
+    mkdir /data/cam 0770 camera camera
+    restorecon_recursive /data/cam
+
+    # Core data directories declared by the Motorola device policy.
+    mkdir /data/power_supply_logger 0750 oem_5001 log
+    mkdir /data/misc/cutback 0770 radio wifi
+    mkdir /data/misc/audio_cutback 0770 radio audio
+
+# Legacy core-data actions run in init, with original trigger and ownership.
+on post-fs-data
+    rm /data/system/perfd/default_values
+    mkdir /data/connectivity 0771 system system
+    chown system system /data/connectivity
+    mkdir /data/connectivity/nsrm 0771 system system
+    chown system system /data/connectivity/nsrm
+
+# Legacy core-data actions run in init, with original trigger and ownership.
+on boot
+    mkdir /data/system/perfd 0770 root system
+    chmod 2770 /data/system/perfd
+
+# Migrate existing vendor directories to the new dedicated labels.
+on post-fs-data
+    restorecon_recursive /data/vendor/connectivity
+    restorecon_recursive /data/vendor/display
+    restorecon_recursive /data/vendor/iop
+    restorecon_recursive /data/vendor/perfd
+    restorecon_recursive /data/vendor/port_bridge
+
+# Core labels for legacy location and performance data.
+on post-fs-data
+    mkdir /data/misc/location 0770 gps gps
+    mkdir /data/misc/location/mq 0770 gps gps
+    mkdir /data/misc/location/xtwifi 0770 gps gps
+
+# Core labels for legacy location and performance data.
+on boot
+    mkdir /data/misc/perfd 0755 root system
+    chmod 2755 /data/misc/perfd
+
+# Upgrade existing core-data labels; device/vendor/cache labels are unchanged.
+on post-fs-data
+    restorecon_recursive /data/misc/location
+    restorecon_recursive /data/misc/perfd
+    restorecon_recursive /data/FTM_AP
+    restorecon_recursive /data/camera
+    restorecon_recursive /data/misc/camera
+
+# Upgrade existing RFS core-data contexts; leave /persist unchanged.
+on post-fs-data
+    restorecon_recursive /data/rfs
+    restorecon_recursive /data/hlos_rfs
