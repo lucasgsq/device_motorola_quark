@@ -13,4 +13,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Carrier_enabled editable -->
     <bool name="config_allow_edit_carrier_enabled" translatable="false">true</bool>
+    <!-- Monthly reference of audited backport batches, not an official SPL. -->
+    <string name="config_lineageSecurityBackportMonth" translatable="false"></string>
 </resources>

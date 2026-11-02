@@ -1,0 +1,6 @@
+{
+  "branch": "A12+",
+  "verified_month": null,
+  "meaning": "Reference of verified LineageOS backport batches; not official SPL or full CVE coverage certification",
+  "installed_build_verified": false
+}
