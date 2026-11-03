@@ -29,6 +29,9 @@ on property:sys.boot_from_charger_mode=1 && property:ro.bootmode=charger
 # Leave the stock/manual charger transition unchanged. Only the helper sets
 # this marker, after the owner preference and battery/USB gates have passed.
 on property:sys.boot_from_charger_mode=1 && property:ro.bootmode=charger && property:sys.quark.usb_autoboot_active=1
+    # class_stop charger also disables the dual-class health HAL.
+    # Explicit start re-enables it so BatteryService can obtain IHealth.
+    start health-hal-2-1
     # Charger mode parks cores and caps CPU frequency. Restore hardware limits
     # before continuing Android without the reboot used by the legacy charger.
     write /sys/devices/system/cpu/cpu0/online 1
