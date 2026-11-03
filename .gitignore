@@ -1,0 +1,3 @@
+
+# Build-generated ASB reference; never commit a per-build result.
+overlay-security-generated/

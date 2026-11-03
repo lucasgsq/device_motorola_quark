@@ -28,6 +28,12 @@ $(call inherit-product, vendor/motorola/quark/quark-vendor.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Set only by build-quark.sh after checking the local backport history.
+# Without the wrapper, Settings falls back to its empty/unverified reference.
+ifneq ($(strip $(QUARK_SECURITY_BACKPORT_OVERLAY)),)
+DEVICE_PACKAGE_OVERLAYS += $(QUARK_SECURITY_BACKPORT_OVERLAY)
+endif
+
 # Device identifier. This must come after all inclusions
 PRODUCT_RELEASE_NAME := Moto MAXX
 PRODUCT_DEVICE := quark
