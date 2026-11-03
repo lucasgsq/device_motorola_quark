@@ -18,4 +18,14 @@
         <!-- APN types that user is not allowed to modify -->
         <string-array name="read_only_apn_types_string_array" num="0" />
     </carrier_config>
+    <!-- XT1225 (retbr/reteu): GSM/WCDMA/LTE, without CDMA or TD-SCDMA menus.
+         libinit selects quark_umts for these variants; keep other Quarks unchanged. -->
+    <carrier_config device="quark_umts">
+        <boolean name="world_phone_bool" value="false" />
+        <boolean name="world_mode_enabled_bool" value="false" />
+        <boolean name="show_cdma_choices_bool" value="false" />
+        <boolean name="show_apn_setting_cdma_bool" value="false" />
+        <boolean name="support_tdscdma_bool" value="false" />
+        <string-array name="support_tdscdma_roaming_networks_string_array" num="0" />
+    </carrier_config>
 </carrier_config_list>
