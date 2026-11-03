@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quark_usb_boot_category">Power</string>
+    <string name="quark_usb_boot_title">Power on when USB is connected</string>
+    <string name="quark_usb_boot_summary">Starts Android from powered-off charging when the battery has enough charge. Applies to this device.</string>
+    <string name="quark_usb_boot_save_error">Could not save the USB power-on setting.</string>
+</resources>

@@ -131,3 +131,13 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES := etc/quark-camera-data.rc
 LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/init
 include $(BUILD_PREBUILT)
+
+# System-side charger helper: no shell or root/capability grant.
+include $(CLEAR_VARS)
+LOCAL_MODULE := quark-usb-autoboot
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := usb_autoboot.c
+LOCAL_CFLAGS := -std=c11 -Wall -Wextra -Werror
+LOCAL_SHARED_LIBRARIES := libcutils liblog
+LOCAL_INIT_RC := etc/quark-usb-autoboot.rc
+include $(BUILD_EXECUTABLE)

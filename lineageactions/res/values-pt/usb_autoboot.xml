@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quark_usb_boot_category">Inicialização</string>
+    <string name="quark_usb_boot_title">Ligar automaticamente ao conectar USB</string>
+    <string name="quark_usb_boot_summary">Inicia o Android ao conectar o USB com o aparelho desligado, quando houver carga suficiente. Vale para este aparelho.</string>
+    <string name="quark_usb_boot_save_error">Não foi possível salvar a opção de inicialização por USB.</string>
+</resources>

@@ -105,4 +105,12 @@
             android:icon="@drawable/ic_settings_pick" />
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/quark_usb_boot_category">
+        <SwitchPreference
+            android:key="usb_auto_boot"
+            android:title="@string/quark_usb_boot_title"
+            android:summary="@string/quark_usb_boot_summary"
+            android:persistent="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

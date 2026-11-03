@@ -114,3 +114,7 @@
 /sys/devices/fdb00000\.qcom,kgsl\-3d0/devfreq/fdb00000\.qcom,kgsl\-3d0/governor u:object_r:quark_overlay_gpu_metric:s0
 /sys/devices/qcom,cpubw\.35/devfreq/qcom,cpubw\.35/cur_freq u:object_r:quark_overlay_bus_metric:s0
 /sys/devices/qcom,cpubw\.35/devfreq/qcom,cpubw\.35/governor u:object_r:quark_overlay_bus_metric:s0
+
+# Owner-controlled physical USB boot preference.
+/persist/quark_usb_boot(/.*)? u:object_r:quark_usb_boot_config_file:s0
+/system/bin/quark-usb-autoboot u:object_r:charger_exec:s0
