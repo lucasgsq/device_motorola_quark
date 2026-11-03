@@ -425,3 +425,6 @@ PRODUCT_COPY_FILES += \
 
 # Preserve the legacy face album before starting the camera daemon.
 PRODUCT_PACKAGES += quark-camera-start quark-camera-data.rc
+
+# Optional USB power-on support, controlled by the owner in LineageActions.
+PRODUCT_PACKAGES += quark-usb-autoboot
