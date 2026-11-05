@@ -53,7 +53,6 @@
                 <item>Speaker</item>
                 <item>Built-In Mic</item>
                 <item>Built-In Back Mic</item>
-                <item>In Call-Voice</item>
             </attachedDevices>
             <defaultOutputDevice>Speaker</defaultOutputDevice>
             <mixPorts>
